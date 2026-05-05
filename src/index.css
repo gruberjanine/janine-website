@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-brand-cream: #fbfaf8;
+  --color-brand-beige: #f5f2ed;
+  --color-brand-rose: #fdf2f2;
+  --color-brand-rose-light: #fff5f5;
+  --color-brand-rose-medium: #e9d5d5;
+  --color-brand-rose-dark: #8c6a69;
+  --color-brand-rose-button: #6b4443;
+  --color-brand-taupe: #8e8271;
+  --color-brand-gold: #c5a059;
+  --color-brand-ink: #1a1a1a;
+  
+  --radius-pill: 9999px;
+  --radius-xl: 32px;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-cream text-brand-ink font-sans antialiased selection:bg-brand-rose-dark selection:text-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.nav-link {
+  @apply relative py-1 transition-all duration-300;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-px bg-brand-ink transition-all duration-300;
+}
+
+.nav-link:hover::after, .nav-link-active::after {
+  @apply w-full;
+}
+
+.nav-link-offset::after {
+  @apply -bottom-1;
+}
+
+.pill-image {
+  @apply rounded-[999px] h-full w-full object-cover shadow-lg;
+}
+
+.transition-page {
+  @apply transition-all duration-700 ease-in-out;
+}
