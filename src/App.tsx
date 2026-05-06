@@ -225,7 +225,7 @@ export default function App() {
             />
             {/* Copyright badge on hero - Light color for visibility */}
             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 md:left-auto md:right-12 md:translate-x-0 z-30">
-              <span className="text-[7px] uppercase tracking-[0.4em] text-white/60 font-bold bg-black/10 px-4 py-1.5 rounded-full backdrop-blur-sm border border-white/10">© Katarina Novcic</span>
+              <span className="text-[6px] uppercase tracking-[0.4em] text-white/60 font-bold bg-black/10 px-4 py-1.5 rounded-full backdrop-blur-sm border border-white/10">© Katarina Novcic</span>
             </div>
             {/* Multi-layered overlay for depth and readability */}
             <div className="absolute inset-0 bg-gradient-to-r from-brand-beige via-brand-beige/40 to-transparent" />
@@ -241,12 +241,12 @@ export default function App() {
             className="max-w-4xl space-y-8"
           >
             <div className="space-y-0 relative">
-              <div className="overflow-hidden pb-2">
+              <div className="pb-2">
                 <motion.span 
                   initial={{ x: "-100%", opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.8 }}
-                  className="text-sm uppercase tracking-[0.6em] text-brand-rose-dark font-bold mb-6 block"
+                  className="text-sm uppercase tracking-[0.6em] text-brand-rose-dark font-bold mb-6 block md:translate-y-0 -translate-y-6"
                 >
                   {t.hero.subtitle}
                 </motion.span>
@@ -313,7 +313,7 @@ export default function App() {
                    />
                    <div className="absolute inset-0 ring-1 ring-inset ring-white/20 rounded-[40px]" />
                 </motion.div>
-                <p className="text-[7px] uppercase tracking-[0.2em] text-brand-taupe/40 text-center font-medium">© Katarina Novcic</p>
+                <p className="text-[6px] uppercase tracking-[0.2em] text-brand-taupe/40 text-center font-medium">© Katarina Novcic</p>
               </div>
             </div>
 
@@ -404,7 +404,7 @@ export default function App() {
                         referrerPolicy="no-referrer"
                      />
                    </motion.div>
-                   <p className="hidden lg:block text-[7px] uppercase tracking-[0.2em] text-brand-taupe/40 text-center font-medium">© Katarina Novcic</p>
+                   <p className="hidden lg:block text-[6px] uppercase tracking-[0.2em] text-brand-taupe/40 text-center font-medium">© Katarina Novcic</p>
                  </div>
                </div>
             </div>
@@ -505,7 +505,7 @@ export default function App() {
                 />
               </motion.div>
               <div className="text-center px-1">
-                <p className="text-[7px] uppercase tracking-[0.2em] text-brand-taupe/40 font-medium">© Katarina Novcic</p>
+                <p className="text-[6px] uppercase tracking-[0.2em] text-brand-taupe/40 font-medium">© Katarina Novcic</p>
               </div>
             </div>
           </div>
@@ -643,7 +643,7 @@ export default function App() {
                             <div className="absolute inset-0 bg-brand-ink/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                           </motion.div>
                           <div className="text-center px-1">
-                             <p className="text-[7px] uppercase tracking-[0.2em] text-brand-taupe/40 font-medium mb-1">{item.copyright || '© Katarina Novcic'}</p>
+                             <p className="text-[6px] uppercase tracking-[0.2em] text-brand-taupe/40 font-medium mb-1">{item.copyright || '© Katarina Novcic'}</p>
                              {item.caption && <p className="text-[11px] font-serif italic text-brand-ink/90 leading-tight">{item.caption}</p>}
                           </div>
                         </div>
@@ -685,7 +685,7 @@ export default function App() {
                           />
                           <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         </motion.div>
-                        <p className="text-[7px] uppercase tracking-[0.2em] text-brand-taupe/40 text-center font-medium">{item.copyright || '© Katarina Novcic'}</p>
+                        <p className="text-[6px] uppercase tracking-[0.2em] text-brand-taupe/40 text-center font-medium">{item.copyright || '© Katarina Novcic'}</p>
                       </div>
                     ))}
                   </div>
@@ -751,7 +751,7 @@ export default function App() {
                      />
                    </div>
                  </motion.div>
-                 <p className="text-[7px] uppercase tracking-[0.2em] text-brand-taupe/40 text-center font-medium">© Katarina Novcic</p>
+                 <p className="text-[6px] uppercase tracking-[0.2em] text-brand-taupe/40 text-center font-medium">© Katarina Novcic</p>
                </div>
 
                <motion.div 
@@ -1066,7 +1066,7 @@ export default function App() {
                       {lightbox.images[lightbox.index].caption && (
                         <p className="font-serif italic text-lg leading-tight">{lightbox.images[lightbox.index].caption}</p>
                       )}
-                      <p className="text-[8px] uppercase tracking-[0.2em] opacity-60 font-bold">{lightbox.images[lightbox.index].copyright || "© Katarina Novcic"}</p>
+                      <p className="text-[6px] uppercase tracking-[0.2em] opacity-60 font-bold">{lightbox.images[lightbox.index].copyright || "© Katarina Novcic"}</p>
                     </div>
                     <div className="text-[10px] tracking-[0.3em] font-bold opacity-40 uppercase">
                       {lightbox.index + 1} / {lightbox.images.length}
