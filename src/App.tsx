@@ -246,7 +246,7 @@ export default function App() {
                   initial={{ x: "-100%", opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.8 }}
-                  className="text-sm uppercase tracking-[0.6em] text-brand-rose-dark font-bold mb-6 block md:translate-y-0 -translate-y-6"
+                  className="text-sm uppercase tracking-[0.6em] text-brand-rose-dark font-bold mb-6 block md:translate-y-0 -translate-y-8"
                 >
                   {t.hero.subtitle}
                 </motion.span>
