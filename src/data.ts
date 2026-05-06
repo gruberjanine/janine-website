@@ -39,7 +39,7 @@ export const RESUME_DATA = {
         date: "28.05.2026",
         time: "19:00",
         title: "Szenenabend – Studierende von Roland Schwab",
-        location: "Neue Studiobühne, Penzinger Straße 7-9, 1140 Wien"
+        location: "Anny Felbermayer Probebühne, Penzingerstraße 7, 1140 Wien"
       }
     ],
     past: [

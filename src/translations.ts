@@ -105,7 +105,7 @@ export const translations = {
             isoDate: "2026-05-28",
             time: "19:00",
             title: "Szenenabend – Studierende von Roland Schwab",
-            location: "Neue Studiobühne, Penzinger Straße 7-9, 1140 Wien"
+            location: "Anny Felbermayer Probebühne, Penzingerstraße 7, 1140 Wien"
           }
         ],
         past: [
@@ -625,7 +625,7 @@ https://www.e-recht24.de
             isoDate: "2026-05-28",
             time: "19:00",
             title: "Scene Evening – Students of Roland Schwab",
-            location: "Neue Studiobühne, Penzinger Straße 7-9, 1140 Vienna"
+            location: "Anny Felbermayer Probebühne, Penzingerstraße 7, 1140 Vienna"
           }
         ],
         past: [
