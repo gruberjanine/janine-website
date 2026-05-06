@@ -32,7 +32,7 @@ export default function Contact() {
                 </div>
                 <div>
                    <p className="text-xs uppercase tracking-widest text-brand-taupe">Email</p>
-                   <a href="mailto:gruber.janine@gmail.com" className="text-xl font-serif">gruber.janine@gmail.com</a>
+                   <a href="mailto:gruber.janine@gmx.net" className="text-xl font-serif">gruber.janine@gmx.net</a>
                 </div>
               </div>
 

@@ -198,16 +198,15 @@ Impressum
 
 Angaben gemäß § 5 TMG
 Janine Gruber
-Märzstraße 144/3
+Märzstraße 144
 1140 Wien
 Österreich
 
-Telefon: +43 676 6867667
-E-Mail: gruber.janine@gmail.com
+E-Mail: gruber.janine@gmx.net
 
 Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
 Janine Gruber
-Märzstraße 144/3
+Märzstraße 144
 1140 Wien
 Österreich
 
@@ -294,9 +293,8 @@ möglich.
 Hinweis zur verantwortlichen Stelle
 Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
 Janine Gruber
-Märzstraße 144/3, 1140, Wien
-Telefon: +43 676 6867667
-E-Mail: gruber.janine@gmail.com
+Märzstraße 144, 1140 Wien
+E-Mail: gruber.janine@gmx.net
 Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über
 die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.)
 entscheidet.
@@ -721,16 +719,15 @@ Imprint
 
 Information according to § 5 TMG
 Janine Gruber
-Märzstraße 144/3
+Märzstraße 144
 1140 Vienna
 Austria
 
-Phone: +43 676 6867667
-Email: gruber.janine@gmail.com
+Email: gruber.janine@gmx.net
 
 Responsible for content according to § 55 para. 2 RStV
 Janine Gruber
-Märzstraße 144/3
+Märzstraße 144
 1140 Vienna
 Austria
 
@@ -787,9 +784,8 @@ We point out that data transmission over the Internet (e.g. communication by ema
 Information about the responsible party
 The responsible party for data processing on this website is:
 Janine Gruber
-Märzstraße 144/3, 1140 Vienna
-Phone: +43 676 6867667
-Email: gruber.janine@gmail.com
+Märzstraße 144, 1140 Vienna
+Email: gruber.janine@gmx.net
 The responsible party is the natural or legal person who alone or jointly with others determines the purposes and means of processing personal data (e.g. names, email addresses, etc.).
  
 Storage duration

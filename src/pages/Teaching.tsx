@@ -100,9 +100,9 @@ export default function Teaching() {
                   <Instagram className="w-5 h-5" />
                   <span className="text-sm font-medium">@janine.vocalcoaching</span>
                 </a>
-                <a href="mailto:gruber.janine@gmail.com" className="flex items-center space-x-4 p-4 bg-brand-beige/30 hover:bg-brand-beige transition-colors rounded-sm">
+                <a href="mailto:gruber.janine@gmx.net" className="flex items-center space-x-4 p-4 bg-brand-beige/30 hover:bg-brand-beige transition-colors rounded-sm">
                   <Mail className="w-5 h-5" />
-                  <span className="text-sm font-medium">gruber.janine@gmail.com</span>
+                  <span className="text-sm font-medium">gruber.janine@gmx.net</span>
                 </a>
              </div>
            </div>

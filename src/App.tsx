@@ -30,7 +30,7 @@ export default function App() {
   const [activeSection, setActiveSection] = useState('home');
   const [mediaTab, setMediaTab] = useState<'videos' | 'stage' | 'portraits'>('videos');
   const [legalModal, setLegalModal] = useState<'imprint' | 'privacy' | null>(null);
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [lightbox, setLightbox] = useState<{ images: { id: string, caption?: string, copyright?: string }[], index: number } | null>(null);
   const [state, handleSubmit] = useForm("xlgzbqek");
 
   const t = TRANSLATIONS[lang];
@@ -65,9 +65,27 @@ export default function App() {
         }
       }
     };
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!lightbox) return;
+      if (e.key === 'ArrowRight') {
+        const nextIndex = (lightbox.index + 1) % lightbox.images.length;
+        setLightbox({ ...lightbox, index: nextIndex });
+      } else if (e.key === 'ArrowLeft') {
+        const prevIndex = (lightbox.index - 1 + lightbox.images.length) % lightbox.images.length;
+        setLightbox({ ...lightbox, index: prevIndex });
+      } else if (e.key === 'Escape') {
+        setLightbox(null);
+      }
+    };
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [lightbox]);
 
   const navItems = [
     { id: 'home', label: t.nav.home },
@@ -612,7 +630,7 @@ export default function App() {
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: idx * 0.05 }}
-                            onClick={() => setSelectedImage(`https://images.weserv.nl/?url=drive.google.com/uc?id=${item.id}&w=1200`)}
+                            onClick={() => setLightbox({ images: RESUME_DATA.gallery.stage, index: idx })}
                             className="aspect-[3/4] rounded-3xl overflow-hidden border border-brand-rose-medium/20 shadow-sm hover:shadow-xl transition-all duration-500 hover:scale-[1.02] relative group cursor-zoom-in"
                           >
                             <img 
@@ -655,7 +673,7 @@ export default function App() {
                           initial={{ opacity: 0, scale: 0.95 }}
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ delay: idx * 0.05 }}
-                          onClick={() => setSelectedImage(`https://images.weserv.nl/?url=drive.google.com/uc?id=${item.id}&w=1200`)}
+                          onClick={() => setLightbox({ images: RESUME_DATA.gallery.portraits, index: idx })}
                           className="aspect-[3/4] rounded-3xl overflow-hidden border border-brand-rose-medium/20 shadow-sm hover:shadow-xl transition-all duration-500 hover:scale-[1.02] relative group cursor-zoom-in"
                         >
                           <img 
@@ -720,7 +738,7 @@ export default function App() {
                    initial={{ opacity: 0, scale: 0.9 }}
                    whileInView={{ opacity: 1, scale: 1 }}
                    viewport={{ once: true }}
-                   onClick={() => setSelectedImage("https://images.weserv.nl/?url=drive.google.com/uc?id=1NAyybBAHbYTQx5zRVGM92k-Q81ivWvSR&w=1200")}
+                   onClick={() => setLightbox({ images: [{ id: "1NAyybBAHbYTQx5zRVGM92k-Q81ivWvSR", copyright: "© Katarina Novcic" }], index: 0 })}
                    className="relative aspect-square cursor-zoom-in"
                  >
                    <div className="absolute inset-0 bg-brand-rose/20 rounded-full blur-3xl animate-pulse" />
@@ -791,7 +809,7 @@ export default function App() {
                 </div>
                 <div className="space-y-1">
                   <p className="text-[10px] uppercase tracking-[0.2em] text-brand-taupe font-bold">Email</p>
-                  <a href="mailto:gruber.janine@gmail.com" className="text-xl md:text-2xl font-serif hover:text-brand-rose-dark transition-colors">gruber.janine@gmail.com</a>
+                  <a href="mailto:gruber.janine@gmx.net" className="text-xl md:text-2xl font-serif hover:text-brand-rose-dark transition-colors">gruber.janine@gmx.net</a>
                 </div>
               </div>
               <div className="flex items-start gap-6 group">
@@ -924,7 +942,7 @@ export default function App() {
   
             <div className="flex justify-center space-x-8 text-brand-taupe">
               <a href="https://instagram.com/janine_gruber_" target="_blank" className="hover:text-brand-rose-dark transition-all duration-300 transform hover:scale-110"><Instagram size={22} /></a>
-              <a href="mailto:gruber.janine@gmail.com" className="hover:text-brand-rose-dark transition-all duration-300 transform hover:scale-110"><Mail size={22} /></a>
+              <a href="mailto:gruber.janine@gmx.net" className="hover:text-brand-rose-dark transition-all duration-300 transform hover:scale-110"><Mail size={22} /></a>
             </div>
   
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 pt-8 border-t border-brand-rose/30 w-full justify-center">
@@ -990,28 +1008,75 @@ export default function App() {
 
       {/* Lightbox Modal */}
       <AnimatePresence>
-        {selectedImage && (
+        {lightbox && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[200] flex items-center justify-center p-4 md:p-12"
           >
-            <div className="absolute inset-0 bg-brand-ink/95 backdrop-blur-xl" onClick={() => setSelectedImage(null)} />
+            <div className="absolute inset-0 bg-brand-ink/95 backdrop-blur-xl" onClick={() => setLightbox(null)} />
+            
             <motion.div
+              layoutId={`img-${lightbox.images[lightbox.index].id}`}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
-              className="relative max-w-full max-h-full flex items-center justify-center"
+              className="relative max-w-full max-h-full flex items-center justify-center group"
             >
-              <img 
-                src={selectedImage} 
-                className="max-w-full max-h-[90vh] rounded-lg shadow-2xl object-contain border border-white/10"
-                alt="Enlarged view"
-                referrerPolicy="no-referrer"
-              />
+              {/* Navigation Arrows */}
+              {lightbox.images.length > 1 && (
+                <>
+                  <button 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setLightbox({ ...lightbox, index: (lightbox.index - 1 + lightbox.images.length) % lightbox.images.length });
+                    }}
+                    className="absolute left-4 md:-left-16 p-4 text-white/50 hover:text-white transition-all bg-black/20 hover:bg-black/40 rounded-full backdrop-blur-sm z-10"
+                    aria-label="Previous image"
+                  >
+                    <ChevronRight className="rotate-180" size={32} />
+                  </button>
+                  <button 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setLightbox({ ...lightbox, index: (lightbox.index + 1) % lightbox.images.length });
+                    }}
+                    className="absolute right-4 md:-right-16 p-4 text-white/50 hover:text-white transition-all bg-black/20 hover:bg-black/40 rounded-full backdrop-blur-sm z-10"
+                    aria-label="Next image"
+                  >
+                    <ChevronRight size={32} />
+                  </button>
+                </>
+              )}
+
+              <div className="relative">
+                <img 
+                  key={lightbox.images[lightbox.index].id}
+                  src={`https://images.weserv.nl/?url=drive.google.com/uc?id=${lightbox.images[lightbox.index].id}&w=1600`} 
+                  className="max-w-full max-h-[85vh] rounded-lg shadow-2xl object-contain border border-white/10"
+                  alt={lightbox.images[lightbox.index].caption || "Enlarged view"}
+                  referrerPolicy="no-referrer"
+                />
+                
+                {/* Image Info Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white rounded-b-lg">
+                  <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                    <div className="space-y-1">
+                      {lightbox.images[lightbox.index].caption && (
+                        <p className="font-serif italic text-lg leading-tight">{lightbox.images[lightbox.index].caption}</p>
+                      )}
+                      <p className="text-[8px] uppercase tracking-[0.2em] opacity-60 font-bold">{lightbox.images[lightbox.index].copyright || "© Katarina Novcic"}</p>
+                    </div>
+                    <div className="text-[10px] tracking-[0.3em] font-bold opacity-40 uppercase">
+                      {lightbox.index + 1} / {lightbox.images.length}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <button 
-                onClick={() => setSelectedImage(null)}
+                onClick={() => setLightbox(null)}
                 className="absolute -top-12 right-0 md:-right-12 p-3 text-white hover:text-brand-rose transition-colors"
               >
                 <X size={32} />
