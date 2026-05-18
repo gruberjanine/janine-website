@@ -101,11 +101,11 @@ export const RESUME_DATA = {
   ],
   videos: [
     {
-      id: "GSRIk55bIug",
+      id: "f10oma92LuA",
       title: "Video 1"
     },
     {
-      id: "TG3G2HVXFa4",
+      id: "VXaQej9UH-c",
       title: "Video 2"
     },
     {
