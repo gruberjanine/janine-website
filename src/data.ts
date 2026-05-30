@@ -40,6 +40,13 @@ export const RESUME_DATA = {
         time: "19:00",
         title: "Szenenabend – Studierende von Roland Schwab",
         location: "Anny Felbermayer Probebühne, Penzingerstraße 7, 1140 Wien"
+      },
+      {
+        date: "30.05.2026",
+        time: "18:00",
+        title: "Finale, 2. Hedda Urbani Gesangswettbewerb",
+        location: "Musikverein Wien",
+        link: "https://musikverein.at/konzert/?id=0010eedb"
       }
     ],
     past: [

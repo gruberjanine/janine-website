@@ -106,6 +106,14 @@ export const translations = {
             time: "19:00",
             title: "Szenenabend – Studierende von Roland Schwab",
             location: "Anny Felbermayer Probebühne, Penzingerstraße 7, 1140 Wien"
+          },
+          {
+            date: "30.05.2026",
+            isoDate: "2026-05-30",
+            time: "18:00",
+            title: "Finale, 2. Hedda Urbani Gesangswettbewerb",
+            location: "Musikverein Wien",
+            link: "https://musikverein.at/konzert/?id=0010eedb"
           }
         ],
         past: [
@@ -626,6 +634,14 @@ https://www.e-recht24.de
             time: "19:00",
             title: "Scene Evening – Students of Roland Schwab",
             location: "Anny Felbermayer Probebühne, Penzingerstraße 7, 1140 Vienna"
+          },
+          {
+            date: "30.05.2026",
+            isoDate: "2026-05-30",
+            time: "18:00",
+            title: "Finals, 2nd Hedda Urbani Singing Competition",
+            location: "Musikverein Vienna",
+            link: "https://musikverein.at/konzert/?id=0010eedb"
           }
         ],
         past: [
