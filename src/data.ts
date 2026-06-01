@@ -21,6 +21,7 @@ export const RESUME_DATA = {
   ],
   coaches: ["Jennifer Larmore", "Prof. Dr. Edith Wiens", "Univ.-Prof. Karlheinz Hanser"],
   competitions: [
+    "2026, Finalistin, Hedda Urbani Wettbewerb",
     "2024, Finalistin, Osaka International Music Competition",
     "2024, Finalistin, Tiroler Klassik Sängerpreis"
   ],

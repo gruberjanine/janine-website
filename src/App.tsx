@@ -441,52 +441,68 @@ export default function App() {
                    <div className="w-8 h-px bg-brand-rose-dark" /> {t.calendar.upcoming}
                 </h3>
               </div>
-              {dynamicUpcoming.map((item, idx) => (
-                <motion.div 
-                  key={idx}
+              {dynamicUpcoming.length > 0 ? (
+                dynamicUpcoming.map((item, idx) => (
+                  <motion.div 
+                    key={idx}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className={cn(
+                      "group grid md:grid-cols-[180px_1fr] gap-8 p-8 md:p-12 bg-white rounded-[40px] border border-brand-rose-medium/20 shadow-sm transition-all duration-500",
+                      item.link && "hover:shadow-xl hover:border-brand-rose-medium/40 cursor-pointer"
+                    )}
+                    onClick={() => item.link && window.open(item.link, '_blank')}
+                  >
+                    <div className="space-y-2">
+                      <div className="text-2xl font-serif text-brand-rose-button">{item.date}</div>
+                      {item.time && <div className="text-sm tracking-widest text-brand-taupe uppercase font-bold">{item.time}</div>}
+                    </div>
+                    
+                    <div className="space-y-6">
+                      <div className="space-y-2">
+                        <h3 className="text-3xl font-serif leading-tight">{item.title}</h3>
+                        {item.description && <p className="text-lg italic text-brand-taupe">{item.description}</p>}
+                      </div>
+   
+                      <div className="grid md:grid-cols-2 gap-6 pt-4 border-t border-brand-rose/30">
+                        <div className="flex items-start gap-3">
+                          <MapPin size={18} className="text-brand-rose-dark mt-1 shrink-0" />
+                          <span className="text-sm leading-relaxed text-brand-ink/70">{item.location}</span>
+                        </div>
+                        <div className="space-y-4">
+                          {item.details && (
+                            <div className="text-sm text-brand-taupe italic">{item.details}</div>
+                          )}
+                          {item.link && (
+                            <a 
+                              href={item.link} 
+                              target="_blank" 
+                              className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-bold text-brand-ink hover:text-brand-rose-button transition-colors"
+                            >
+                              {t.calendar.detailsBtn} <ExternalLink size={14} />
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))
+              ) : (
+                <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className={cn(
-                    "group grid md:grid-cols-[180px_1fr] gap-8 p-8 md:p-12 bg-white rounded-[40px] border border-brand-rose-medium/20 shadow-sm transition-all duration-500",
-                    item.link && "hover:shadow-xl hover:border-brand-rose-medium/40 cursor-pointer"
-                  )}
-                  onClick={() => item.link && window.open(item.link, '_blank')}
+                  className="p-8 md:p-12 bg-white/50 backdrop-blur-sm rounded-[40px] border border-brand-rose-medium/20 text-center space-y-4 shadow-sm"
                 >
-                  <div className="space-y-2">
-                    <div className="text-2xl font-serif text-brand-rose-button">{item.date}</div>
-                    {item.time && <div className="text-sm tracking-widest text-brand-taupe uppercase font-bold">{item.time}</div>}
+                  <div className="mx-auto w-16 h-16 bg-brand-rose/10 rounded-full flex items-center justify-center">
+                    <CalendarIcon size={24} className="text-brand-rose-dark" />
                   </div>
-                  
-                  <div className="space-y-6">
-                    <div className="space-y-2">
-                      <h3 className="text-3xl font-serif leading-tight">{item.title}</h3>
-                      {item.description && <p className="text-lg italic text-brand-taupe">{item.description}</p>}
-                    </div>
- 
-                    <div className="grid md:grid-cols-2 gap-6 pt-4 border-t border-brand-rose/30">
-                      <div className="flex items-start gap-3">
-                        <MapPin size={18} className="text-brand-rose-dark mt-1 shrink-0" />
-                        <span className="text-sm leading-relaxed text-brand-ink/70">{item.location}</span>
-                      </div>
-                      <div className="space-y-4">
-                        {item.details && (
-                          <div className="text-sm text-brand-taupe italic">{item.details}</div>
-                        )}
-                        {item.link && (
-                          <a 
-                            href={item.link} 
-                            target="_blank" 
-                            className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-bold text-brand-ink hover:text-brand-rose-button transition-colors"
-                          >
-                            {t.calendar.detailsBtn} <ExternalLink size={14} />
-                          </a>
-                        )}
-                      </div>
-                    </div>
+                  <div>
+                    <h4 className="text-2xl font-serif text-brand-ink">{t.calendar.emptyUpcoming}</h4>
                   </div>
                 </motion.div>
-              ))}
+              )}
             </div>
 
             {/* Sticky Portrait in Calendar Section */}
