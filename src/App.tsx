@@ -490,9 +490,10 @@ export default function App() {
                 ))
               ) : (
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  key={lang}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3 }}
                   className="p-8 md:p-12 bg-white/50 backdrop-blur-sm rounded-[40px] border border-brand-rose-medium/20 text-center space-y-4 shadow-sm"
                 >
                   <div className="mx-auto w-16 h-16 bg-brand-rose/10 rounded-full flex items-center justify-center">
