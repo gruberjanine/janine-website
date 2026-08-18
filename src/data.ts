@@ -2,10 +2,10 @@
 export const RESUME_DATA = {
   education: [
     { 
-      years: "2024 - HEUTE", 
-      title: "Master Musikdramatische Darstellung", 
+      years: "2024 - 2026", 
+      title: "Master of Arts mit Auszeichnung", 
       institution: "Universität für Musik und darstellende Kunst Wien", 
-      details: "Klasse: Roland Schwab, Hartmut Keil, Km.Sgr.in Edith Lienbacher" 
+      details: "Musikdramatische Darstellung · Klasse: Roland Schwab, Hartmut Keil, Km.Sgr.in Edith Lienbacher" 
     },
     { 
       years: "2018 - 2024", 
