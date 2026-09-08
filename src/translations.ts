@@ -16,7 +16,7 @@ export const translations = {
     },
     about: {
       title: 'Vita',
-      bio: "Die österreichische Mezzosopranistin Janine Gruber war in der Spielzeit 2025/26 am NEST – Neue Staatsoper Wien als Tisbe (Aschenputtel/ G. Rossini) sowie als Cover für die Rollen Kardinälin/ 1. Drillingsleutant/ 1. Drillingsskelett (Musketiere! / S. Schwab) zu erleben. Weitere Bühnenerfahrungen sammelte sie am Schlosstheater Schönbrunn, wo sie Partien wie Hänsel (Hänsel und Gretel/ E. Humperdinck), Ciesca (Gianni Schicchi/ G. Puccini) und La Suora Infermiera (Suor Angelica/ G. Puccini) gestaltete.\n\nAuf dem Konzertpodium arbeitete sie unter anderem mit Alfred Eschwé und der Beethoven Philharmonie Baden im Schlosstheater Schönbrunn sowie mit Tom Gröger und der Donau Philharmonie Stockerau zusammen. Wertvolle künstlerische Erfahrungen sammelt sie zudem als Stipendiatin der Yehudi Menuhin Stiftung Live Music Now, für die sie regelmäßig konzertiert.\n\nSeit 2018 studierte Janine Gruber an der Universität für Musik und darstellende Kunst Wien (MDW), wo sie zunächst ihr Bachelorstudium im Fach Gesang mit Auszeichnung und 2026 auch ihr Masterstudium Musikdramatische Darstellung bei Km.Sgr.in Edith Lienbacher, Roland Schwab und Hartmut Keil mit Auszeichnung abschloss. Ihren ersten Unterricht nahm sie am Tiroler Landeskonservatorium; weitere prägende Impulse verdankt sie der Zusammenarbeit mit Künstlerpersönlichkeiten wie Jennifer Larmore, Edith Wiens und Karlheinz Hanser.\n\nJanine Gruber ist mehrfache Preisträgerin des Wettbewerbes Prima la musica. Außerdem war sie 2026 Finalistin beim Hedda Urbani Wettbewerb und 2024 Finalistin bei der Osaka International Music Competition sowie beim Tiroler Klassik Sängerpreis.",
+      bio: "Die österreichische Mezzosopranistin Janine Gruber war in der Spielzeit 2025/26 am NEST – Neue Staatsoper Wien als Tisbe (Aschenputtel/ G. Rossini) sowie als Cover für die Rollen Kardinälin/ 1. Drillingsleutant/ 1. Drillingsskelett (Musketiere! / S. Schwab) zu erleben. Weitere Bühnenerfahrungen sammelte sie am Schlosstheater Schönbrunn, wo sie Partien wie Hänsel (Hänsel und Gretel/ E. Humperdinck), Ciesca (Gianni Schicchi/ G. Puccini) und La Suora Infermiera (Suor Angelica/ G. Puccini) gestaltete.\n\nAuf dem Konzertpodium arbeitete sie unter anderem mit Alfred Eschwé und der Beethoven Philharmonie Baden im Schlosstheater Schönbrunn sowie mit Tom Gröger und der Donau Philharmonie Stockerau zusammen. Wertvolle künstlerische Erfahrungen sammelt sie zudem als Stipendiatin der Yehudi Menuhin Stiftung Live Music Now, für die sie regelmäßig konzertiert.\n\nSeit 2018 studierte Janine Gruber an der Universität für Musik und darstellende Kunst Wien (MDW), wo sie zunächst ihr Bachelorstudium im Fach Gesang mit Auszeichnung und 2026 auch ihr Masterstudium Musikdramatische Darstellung bei Km.Sgr.in Edith Lienbacher, Roland Schwab und Hartmut Keil mit Auszeichnung abschloss. Ihren ersten Unterricht nahm sie am Tiroler Landeskonservatorium; weitere prägende Impulse verdankt sie der Zusammenarbeit mit Künstlerpersönlichkeiten wie Km.Sgr.in Brigitte Fassbaender, Jennifer Larmore, Edith Wiens und Christina Bock.\n\nJanine Gruber ist mehrfache Preisträgerin des Wettbewerbes Prima la musica. Außerdem war sie 2026 Finalistin beim Hedda Urbani Wettbewerb und 2024 Finalistin bei der Osaka International Music Competition sowie beim Tiroler Klassik Sängerpreis.",
       education: 'Ausbildung',
       coaches: 'Coachings',
       competitions: 'Wettbewerbe',
@@ -43,7 +43,7 @@ export const translations = {
             institution: "Tiroler Landeskonservatorium" 
           }
         ],
-        coaches: ["Jennifer Larmore", "Prof. Dr. Edith Wiens", "Univ.-Prof. Karlheinz Hanser"],
+        coaches: ["Km.Sgr.in Brigitte Fassbaender", "Jennifer Larmore", "Prof. Dr. Edith Wiens", "Christina Bock"],
         competitions: [
           "2026, Finalistin, Hedda Urbani Wettbewerb",
           "2024, Finalistin, Osaka International Music Competition",
@@ -92,6 +92,21 @@ export const translations = {
       emptyUpcoming: 'Neue Termine in Kürze',
       resumeData: {
         upcoming: [
+          {
+            date: "05.09.2026",
+            isoDate: "2026-09-05",
+            time: "20:00",
+            title: "Abschlusskonzert Meisterkurs Kammersängerin Brigitte Fassbaender",
+            location: "Lanserhaus, Plazer-Str. 22-24, 39057 Eppan",
+            details: "Am Klavier: Anne Larlee"
+          },
+          {
+            date: "10.10.2026",
+            isoDate: "2026-10-10",
+            time: "19:00",
+            title: "Konzert Wiener Zentrum für Gesang",
+            location: "Roter Salon, Wipplingerstraße 20, 1010 Wien"
+          },
           {
             date: "11.05.2026",
             isoDate: "2026-05-11",
@@ -546,7 +561,7 @@ https://www.e-recht24.de
       title: 'Biography',
       subtitle: 'Vita',
       intro: 'Janine Gruber graduated from the Vienna Conservatory. Her artistic journey took her from musical theatre to classical opera and vocal pedagogy.',
-      bio: "Austrian mezzo-soprano Janine Gruber was featured at NEST – Neue Staatsoper Vienna during the 2025/26 season, performing the role of Tisbe (Aschenputtel/ G. Rossini) and covering the roles of Kardinälin/ 1. Drillingsleutant/ 1. Drillingsskelett in S. Schwab’s Musketiere!. Her stage experience also includes performing roles such as Hänsel (Hänsel und Gretel/ E. Humperdinck), Ciesca (Gianni Schicchi/ G. Puccini), and La Suora Infermiera (Suor Angelica/ G. Puccini) at Schlosstheater Schönbrunn.\n\nOn the concert stage, she has collaborated with conductors such as Alfred Eschwé and the Beethoven Philharmonie Baden at Schlosstheater Schönbrunn, and with Tom Gröger and the Donau Philharmonie Stockerau. She also gains extensive performance experience as a scholarship holder of the Yehudi Menuhin Live Music Now foundation.\n\nFrom 2018 onwards, Janine Gruber studied at the University of Music and Performing Arts Vienna (MDW), where she first completed her Bachelor of Arts in Voice with honors and in 2026 also graduated with honors from her Master's degree in Opera Performance under the guidance of Km.Sgr.in Edith Lienbacher, Roland Schwab, and Hartmut Keil. She received her early musical training at the Tyrolean State Conservatory and has gained further artistic inspiration through her work with Jennifer Larmore, Edith Wiens, and Karlheinz Hanser.\n\nJanine Gruber is a multiple laureate of the Prima la musica competition. In addition, she was a finalist at the Hedda Urbani Competition in 2026, and in 2024, a finalist at the Osaka International Music Competition as well as the Tyrolean Classical Singers' Prize.",
+      bio: "Austrian mezzo-soprano Janine Gruber was featured at NEST – Neue Staatsoper Vienna during the 2025/26 season, performing the role of Tisbe (Aschenputtel/ G. Rossini) and covering the roles of Kardinälin/ 1. Drillingsleutant/ 1. Drillingsskelett in S. Schwab’s Musketiere!. Her stage experience also includes performing roles such as Hänsel (Hänsel und Gretel/ E. Humperdinck), Ciesca (Gianni Schicchi/ G. Puccini), and La Suora Infermiera (Suor Angelica/ G. Puccini) at Schlosstheater Schönbrunn.\n\nOn the concert stage, she has collaborated with conductors such as Alfred Eschwé and the Beethoven Philharmonie Baden at Schlosstheater Schönbrunn, and with Tom Gröger and the Donau Philharmonie Stockerau. She also gains extensive performance experience as a scholarship holder of the Yehudi Menuhin Live Music Now foundation.\n\nFrom 2018 onwards, Janine Gruber studied at the University of Music and Performing Arts Vienna (MDW), where she first completed her Bachelor of Arts in Voice with honors and in 2026 also graduated with honors from her Master's degree in Opera Performance under the guidance of Km.Sgr.in Edith Lienbacher, Roland Schwab, and Hartmut Keil. She received her early musical training at the Tyrolean State Conservatory and has gained further artistic inspiration through her work with Km.Sgr.in Brigitte Fassbaender, Jennifer Larmore, Edith Wiens, and Christina Bock.\n\nJanine Gruber is a multiple laureate of the Prima la musica competition. In addition, she was a finalist at the Hedda Urbani Competition in 2026, and in 2024, a finalist at the Osaka International Music Competition as well as the Tyrolean Classical Singers' Prize.",
       education: 'Education',
       coaches: 'Coaches',
       competitions: 'Competitions',
@@ -573,7 +588,7 @@ https://www.e-recht24.de
             institution: "Tyrolean State Conservatory" 
           }
         ],
-        coaches: ["Jennifer Larmore", "Prof. Dr. Edith Wiens", "Univ.-Prof. Karlheinz Hanser"],
+        coaches: ["Km.Sgr.in Brigitte Fassbaender", "Jennifer Larmore", "Prof. Dr. Edith Wiens", "Christina Bock"],
         competitions: [
           "2026, Finalist, Hedda Urbani Competition",
           "2024, Finalist, Osaka International Music Competition",
@@ -622,6 +637,21 @@ https://www.e-recht24.de
       emptyUpcoming: 'New dates coming soon',
       resumeData: {
         upcoming: [
+          {
+            date: "05.09.2026",
+            isoDate: "2026-09-05",
+            time: "20:00",
+            title: "Final Concert Masterclass Kammersängerin Brigitte Fassbaender",
+            location: "Lanserhaus, Plazer-Str. 22-24, 39057 Eppan",
+            details: "On the piano: Anne Larlee"
+          },
+          {
+            date: "10.10.2026",
+            isoDate: "2026-10-10",
+            time: "19:00",
+            title: "Concert Wiener Zentrum für Gesang",
+            location: "Roter Salon, Wipplingerstraße 20, 1010 Vienna"
+          },
           {
             date: "11.05.2026",
             isoDate: "2026-05-11",

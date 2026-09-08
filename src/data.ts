@@ -19,7 +19,7 @@ export const RESUME_DATA = {
       institution: "Tiroler Landeskonservatorium" 
     }
   ],
-  coaches: ["Jennifer Larmore", "Prof. Dr. Edith Wiens", "Univ.-Prof. Karlheinz Hanser"],
+  coaches: ["Km.Sgr.in Brigitte Fassbaender", "Jennifer Larmore", "Prof. Dr. Edith Wiens", "Christina Bock"],
   competitions: [
     "2026, Finalistin, Hedda Urbani Wettbewerb",
     "2024, Finalistin, Osaka International Music Competition",
@@ -27,6 +27,19 @@ export const RESUME_DATA = {
   ],
   calendar: {
     upcoming: [
+      {
+        date: "05.09.2026",
+        time: "20:00",
+        title: "Abschlusskonzert Meisterkurs Kammersängerin Brigitte Fassbaender",
+        location: "Lanserhaus, Plazer-Str. 22-24, 39057 Eppan",
+        details: "Am Klavier: Anne Larlee"
+      },
+      {
+        date: "10.10.2026",
+        time: "19:00",
+        title: "Konzert Wiener Zentrum für Gesang",
+        location: "Roter Salon, Wipplingerstraße 20, 1010 Wien"
+      },
       {
         date: "11.05.2026",
         time: "19:00",
