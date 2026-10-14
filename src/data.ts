@@ -128,6 +128,14 @@ export const RESUME_DATA = {
     {
       id: "2n2COYGuHQE",
       title: "Video 2"
+    },
+    {
+      id: "Dd5U7Tt9HGc",
+      title: "Video 3"
+    },
+    {
+      id: "9U3DEtkSjoY",
+      title: "Video 4"
     }
   ],
   gallery: {
