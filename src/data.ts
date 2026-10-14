@@ -122,16 +122,12 @@ export const RESUME_DATA = {
   ],
   videos: [
     {
-      id: "f10oma92LuA",
+      id: "w4SSIKtgeCY",
       title: "Video 1"
     },
     {
-      id: "VXaQej9UH-c",
+      id: "2n2COYGuHQE",
       title: "Video 2"
-    },
-    {
-      id: "VisNOfBqRNM",
-      title: "Video 3"
     }
   ],
   gallery: {
